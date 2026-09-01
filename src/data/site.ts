@@ -81,14 +81,6 @@ export const philosophy = {
     'I believe effective QA starts with understanding the product and its risks. Automation should remove repetitive work, while thoughtful testing should focus human effort where it provides the most value.',
 } as const;
 
-export const heroPipeline = [
-  'Requirements',
-  'Test Strategy',
-  'Automation',
-  'Validation',
-  'Quality',
-] as const;
-
 export const contact = {
   heading: "Let's Talk Quality.",
   copy: 'Have a product to test, an automation challenge, or an interesting engineering problem? Let’s connect.',

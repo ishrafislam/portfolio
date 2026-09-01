@@ -113,6 +113,16 @@
     transform: none;
   }
 
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-ring {
+    animation: spin-slow 24s linear infinite;
+  }
+
   .text-gradient-accent {
     background-image: linear-gradient(
       100deg,

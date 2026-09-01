@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { heroMeta, site } from '@/data/site';
 import { Reveal } from '@/components/ui/Reveal';
-import { HeroVisual } from '@/components/sections/HeroVisual';
+import { HeroPortrait } from '@/components/sections/HeroPortrait';
 
 export function Hero() {
   return (
@@ -16,7 +16,7 @@ export function Hero() {
       />
 
       <div className="mx-auto grid w-full max-w-5xl gap-14 lg:grid-cols-[1.35fr_1fr] lg:items-center">
-        <div>
+        <div className="lg:order-first">
           <Reveal as="p" className="font-mono text-xs tracking-[0.18em] text-accent uppercase">
             {site.positioning}
           </Reveal>
@@ -76,8 +76,8 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal index={4} className="hidden justify-self-end lg:block">
-          <HeroVisual />
+        <Reveal className="order-first flex justify-center lg:order-last lg:justify-self-end">
+          <HeroPortrait />
         </Reveal>
       </div>
     </section>
