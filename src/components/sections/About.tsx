@@ -7,7 +7,7 @@ export function About() {
   return (
     <Section id="about">
       <Reveal>
-        <SectionHeading eyebrow="01 / About" title={about.heading} />
+        <SectionHeading title={about.heading} />
       </Reveal>
 
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.5fr_1fr]">
@@ -30,7 +30,7 @@ export function About() {
                     aria-hidden="true"
                     className="absolute top-1.5 -left-[1.8125rem] size-2 rounded-full bg-border-strong ring-4 ring-background"
                   />
-                  <p className="font-mono text-xs text-accent">
+                  <p className="text-xs text-accent">
                     {experience.startDate.split(' ')[1]}
                   </p>
                   <p className="mt-1 text-sm font-medium">{experience.company}</p>
@@ -41,7 +41,7 @@ export function About() {
                 aria-hidden="true"
                 className="absolute top-1.5 -left-[1.8125rem] size-2 rounded-full bg-accent ring-4 ring-background"
               />
-              <p className="font-mono text-xs text-accent">Present</p>
+              <p className="text-xs text-accent">Present</p>
               <p className="mt-1 text-sm font-medium">Software QA Engineer</p>
             </li>
           </ol>

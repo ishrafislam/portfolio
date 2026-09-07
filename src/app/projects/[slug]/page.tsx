@@ -48,11 +48,11 @@ export default async function ProjectPage({ params }: Params) {
   ].filter((fact): fact is { label: string; value: string } => fact !== null);
 
   return (
-    <article className="px-6 py-12 sm:px-8 sm:py-16">
-      <div className="mx-auto w-full max-w-3xl">
+    <article className="px-4 py-12 sm:px-6 lg:px-8 sm:py-16">
+      <div className="mx-auto w-full max-w-[70ch]">
         <Link
           href="/projects"
-          className="group inline-flex items-center gap-2 font-mono text-xs text-subtle transition-colors hover:text-foreground"
+          className="action-secondary text-sm"
         >
           <ArrowLeft
             aria-hidden="true"
@@ -62,7 +62,7 @@ export default async function ProjectPage({ params }: Params) {
         </Link>
 
         <Reveal className="mt-10">
-          <p className="font-mono text-xs tracking-[0.18em] text-accent uppercase">
+          <p className="text-xs text-accent">
             {project.kind}
           </p>
           <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -73,10 +73,10 @@ export default async function ProjectPage({ params }: Params) {
           </p>
         </Reveal>
 
-        <Reveal index={1} as="dl" className="mt-10 grid gap-5 border-y border-border py-7 sm:grid-cols-2">
+        <Reveal index={1} as="dl" className="mt-10 grid gap-5 border-y border-border py-7 md:grid-cols-2">
           {facts.map((fact) => (
             <div key={fact.label}>
-              <dt className="font-mono text-xs tracking-[0.14em] text-subtle uppercase">
+              <dt className="text-xs text-subtle">
                 {fact.label}
               </dt>
               <dd className="mt-2 text-sm">{fact.value}</dd>
@@ -102,7 +102,7 @@ export default async function ProjectPage({ params }: Params) {
                   {section.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="flex gap-3 text-sm leading-relaxed text-muted"
+                      className="flex gap-3 text-base leading-7 text-muted"
                     >
                       <span
                         aria-hidden="true"
@@ -148,9 +148,9 @@ export default async function ProjectPage({ params }: Params) {
         <Reveal className="mt-16 border-t border-border pt-8">
           <Link
             href="/#contact"
-            className="text-sm font-medium text-accent transition-opacity hover:opacity-80"
+            className="inline-flex min-h-11 items-center text-base font-medium text-accent underline underline-offset-4"
           >
-            Want the detail behind this work? Get in touch →
+            Want the detail behind this work? Get in touch
           </Link>
         </Reveal>
       </div>

@@ -1,20 +1,15 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import { site } from '@/data/site';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
+const plex = localFont({
+  src: './fonts/IBMPlexSans.ttf',
+  weight: '100 700',
+  variable: '--font-plex',
   display: 'swap',
 });
 
@@ -62,8 +57,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fbfbfc' },
-    { media: '(prefers-color-scheme: dark)', color: '#16181c' },
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#101D32' },
   ],
 };
 
@@ -99,14 +94,8 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Scroll reveals are driven by JS; without it, show everything. */}
-        <noscript>
-          <style>{'.reveal{opacity:1 !important;transform:none !important}'}</style>
-        </noscript>
-      </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        className={`${plex.variable} font-sans antialiased`}
       >
         <ThemeProvider>
           <a
@@ -116,7 +105,7 @@ export default function RootLayout({
             Skip to content
           </a>
           <Navbar />
-          <main id="main">{children}</main>
+          <main id="main" tabIndex={-1}>{children}</main>
           <Footer />
         </ThemeProvider>
         <script

@@ -16,12 +16,12 @@ export function Section({
     <section
       id={id}
       className={cn(
-        'scroll-mt-24 px-6 py-20 sm:px-8 sm:py-24 lg:py-28',
+        'px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24',
         bordered && 'border-t border-border',
         className,
       )}
     >
-      <div className="mx-auto w-full max-w-5xl">{children}</div>
+      <div className="mx-auto w-full max-w-6xl">{children}</div>
     </section>
   );
 }
@@ -40,15 +40,15 @@ export function SectionHeading({
   return (
     <div className={cn('max-w-2xl', className)}>
       {eyebrow ? (
-        <p className="mb-3 font-mono text-xs tracking-[0.18em] text-accent uppercase">
+        <p className="mb-3 text-xs text-accent">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+      <h2 className="text-[clamp(1.875rem,3.5vw,2.75rem)] leading-tight font-semibold tracking-tight">
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-muted">{description}</p>
+        <p className="mt-4 max-w-[65ch] text-base leading-7 text-muted">{description}</p>
       ) : null}
     </div>
   );

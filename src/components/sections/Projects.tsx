@@ -10,13 +10,12 @@ export function Projects() {
     <Section id="projects">
       <Reveal>
         <SectionHeading
-          eyebrow="03 / Work"
           title="Selected Projects"
           description="Products I have tested, automated and helped ship — from telecom ecosystems to SaaS platforms and AI-powered search."
         />
       </Reveal>
 
-      <ul className="mt-10 grid gap-4 sm:grid-cols-2">
+      <ul className="mt-10">
         {featuredProjects.map((project, index) => (
           <Reveal key={project.slug} index={index % 2} as="li">
             <ProjectCard project={project} />
@@ -29,7 +28,7 @@ export function Projects() {
           href="/projects"
           className="group inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-medium ring-1 ring-border transition-colors hover:bg-surface hover:ring-border-strong"
         >
-          View All Projects
+          View all projects
           <ArrowRight
             aria-hidden="true"
             className="size-4 transition-transform duration-300 group-hover:translate-x-0.5"

@@ -15,11 +15,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Experience />
       <Projects />
+      <Experience />
       <Expertise />
       <TechStack />
+      <About />
       <Philosophy />
       <Mindset />
       <PersonalProjects />

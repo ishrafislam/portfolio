@@ -45,7 +45,7 @@ export function ThemeToggle({ className }: { className?: string }) {
             aria-label={`${label} theme`}
             aria-pressed={active}
             className={cn(
-              'inline-flex size-8 items-center justify-center rounded-md transition-colors',
+              'inline-flex size-11 items-center justify-center rounded-md transition-colors',
               active
                 ? 'bg-surface-raised text-accent'
                 : 'text-subtle hover:text-foreground',

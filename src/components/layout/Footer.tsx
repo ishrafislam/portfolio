@@ -8,12 +8,12 @@ const footerLinks = navLinks.filter((link) =>
 
 export function Footer() {
   return (
-    <footer className="border-t border-border px-6 py-12 sm:px-8">
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-10">
+    <footer className="border-t border-border px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-sm font-semibold tracking-tight">{site.name}</p>
-            <p className="mt-1 font-mono text-xs text-accent">{site.title}</p>
+            <p className="mt-1 text-xs text-accent">{site.title}</p>
             <p className="mt-3 text-xs text-subtle">{site.location}</p>
           </div>
 
@@ -23,7 +23,7 @@ export function Footer() {
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted transition-colors hover:text-foreground"
+                    className="inline-flex min-h-11 items-center text-sm text-muted transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>

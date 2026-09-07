@@ -15,10 +15,10 @@ const ordered = [...projects].sort((a, b) => a.tier - b.tier);
 
 export default function ProjectsPage() {
   return (
-    <div className="px-6 py-16 sm:px-8 sm:py-24">
-      <div className="mx-auto w-full max-w-5xl">
+    <div className="px-4 py-16 sm:px-6 lg:px-8 sm:py-24">
+      <div className="mx-auto w-full max-w-6xl">
         <Reveal>
-          <p className="font-mono text-xs tracking-[0.18em] text-accent uppercase">
+          <p className="text-xs text-accent">
             Work
           </p>
           <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">

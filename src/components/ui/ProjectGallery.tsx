@@ -44,7 +44,7 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
               onClick={() => setFilter(value as Filter)}
               aria-pressed={active}
               className={cn(
-                'rounded-lg px-3.5 py-2 font-mono text-xs transition-colors',
+                'min-h-11 rounded-lg px-4 py-2 text-sm transition-colors',
                 active
                   ? 'bg-foreground text-background'
                   : 'text-muted ring-1 ring-border hover:text-foreground hover:ring-border-strong',
@@ -56,12 +56,12 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
         })}
       </div>
 
-      <p aria-live="polite" className="sr-only">
+      <p aria-live="polite" className="mt-5 text-sm text-muted">
         {visible.length} {visible.length === 1 ? 'project' : 'projects'} shown
         {filter === 'All' ? '' : ` for ${filter}`}
       </p>
 
-      <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+      <ul className="mt-6">
         {visible.map((project) => (
           <li key={project.slug}>
             <ProjectCard project={project} />

@@ -35,18 +35,18 @@ export function SocialLinks({
               href={link.href}
               target={isEmail ? undefined : '_blank'}
               rel={isEmail ? undefined : 'noreferrer noopener'}
-              aria-label={isEmail ? `Email ${link.label}` : link.label}
+              aria-label={isEmail ? "Send email" : link.label}
               className={cn(
                 'inline-flex items-center gap-2 rounded-lg transition-colors',
                 variant === 'icon' &&
-                  'size-9 justify-center text-muted ring-1 ring-border hover:text-foreground hover:ring-border-strong',
+                  'size-11 justify-center text-muted ring-1 ring-border hover:text-foreground hover:ring-border-strong',
                 variant === 'button' &&
-                  'px-4 py-2.5 text-sm font-medium text-foreground ring-1 ring-border hover:bg-surface hover:ring-border-strong',
+                  'min-h-11 px-4 py-2.5 text-sm font-medium text-foreground ring-1 ring-border hover:bg-surface hover:ring-border-strong',
               )}
             >
               <Icon aria-hidden="true" className="size-4" />
               {variant === 'button' ? (
-                <span>{isEmail ? 'Email Me' : link.label}</span>
+                <span>{isEmail ? 'Send email' : link.label}</span>
               ) : (
                 <span className="sr-only">{link.label}</span>
               )}
